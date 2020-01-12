@@ -1,0 +1,16 @@
+#ignore the whole build content
+/build/*
+#ignore .o files
+*.o
+
+#ignore .vtu .csv .log files
+*.vtu
+*.csv
+*.log
+*.dvi
+*.ps
+*.aux
+*.gz
+
+#ignore mac specific files
+*.DS_Store
