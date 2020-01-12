@@ -1,0 +1,81 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{ifthen}                % if then else Abfragen
+\newboolean{boldeqnitalic}
+\setboolean{boldeqnitalic}{true} 
+\usepackage{caption}
+\usepackage{float}
+\usepackage{color}
+\usepackage[utf8]{inputenc}
+\usepackage[intlimits] {amsmath}   % muss for defjs# stehen
+\usepackage{graphicx}
+\usepackage{psfrag}
+\usepackage{ifthen}
+\usepackage{fancyhdr}
+\usepackage{rotating}
+\usepackage{multirow}
+\usepackage{booktabs}              % Dicke Tabellenlinien
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{bm}                    % fette Schrift in Formeln
+\usepackage{bbm}
+\usepackage{theorem}
+\usepackage{upgreek}  % gerade (roman) griechische Buchstaben z.B. \upalpha
+\usepackage{pifont}   % zusaetzliche Schriften, z.B. eingekreiste Zahlen
+\usepackage[active]{srcltx}   % aktive suche im xdv
+\usepackage{framed}
+\usepackage{suetterl}  % Suetterlin Schrift
+\newfont{\suetdbl}{suet14 scaled 2000}
+
+\usepackage{yfonts}  % altdeutsche Schrifte und Initialen
+\newfont{\gothdbl}{ygoth scaled 2000} 
+\newfont{\frakdbl}{yfrak scaled 2000}
+\newfont{\swabdbl}{yswab scaled 2000}
+
+\usepackage[]{defjs3}
+
+\usepackage{import}
+\usepackage{cancel}
+\usepackage{pgf}
+
+\usepackage{layouts}	% for displaying the \textwidth
+\usepackage{printlen}	% for displaying the \textwidth
+
+\sloppy
+\oddsidemargin   0.30cm            % linker Rand ungerade Seiten
+\evensidemargin  0.30cm            % linker Rand gerade Seiten (twoside)
+\topmargin       0.15cm            % OK Blatt - OK Kopfzeile
+\topmargin      -1.35cm            % OK Blatt - OK Kopfzeile bei PS
+\headheight      0.15cm            % Hhe der Kopfzeile
+\headsep         0.70cm            % UK Kopfzeile - OK Rumpf
+\topskip         0.60cm            % OK Rumpf - UK Textzeile
+\textheight     24.50cm            % Texthhe
+\textwidth      16.00cm            % Textbreite
+\footskip        1.00cm            % Uk Rumpf - UK Fu{\'a}zeile
+\fboxsep.3cm                       % Rahmenaufweitung 0.3cm
+\setlength{\parindent}{0.0cm}      % Einzug 1. Zeile eines Absatzes
+\setlength{\parskip}{1.ex}         % Abstand zweier Abs"atze
+\setcounter{secnumdepth}{4}        % Tiefe der section Nummern
+ 
+\begin{document}
+\thispagestyle{empty}
+ \section{A Python Plot Test}
+ 
+ Some interesting values for plotting:
+ \begin{itemize}
+ 	\item The \verb!\textwidth! is : \the\textwidth = \printinunitsof{cm}\prntlen{\textwidth} = \printinunitsof{in}\prntlen{\textwidth}
+ \end{itemize}
+
+\begin{Figure}[htb]
+\begin{center}
+\input{mpm1.pgf}
+\end{center}
+	\caption{A plot made from python with matplotlib.}
+	\label{fig:first}
+\end{Figure}
+
+\textbf{Reference:}
+\begin{itemize}
+	\item[] \verb!https://timodenk.com/blog/exporting-matplotlib-plots-to-latex/! 
+\end{itemize}
+
+\end{document}
